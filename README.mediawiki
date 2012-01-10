@@ -1,0 +1,1 @@
+bounds is a Python module that add support for bounded types inspired in Pascal bounded checkers. This would allow for example to get an error when trying to use a number outside a predefined range, or use this range to iterate over it being defined only one time.
