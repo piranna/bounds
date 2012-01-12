@@ -23,3 +23,13 @@ class IntBounds:
 
     def __iter__(self):
         return xrange(self._low, self._high)
+
+    def __call__(self):
+
+
+orig_range = range
+def range(stop, *args, **vargs):
+    if isinstance(stop, IntBounds):
+        return stop
+    else:
+        orig_range(stop, *args, **vargs)
